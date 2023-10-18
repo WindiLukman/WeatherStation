@@ -1,5 +1,5 @@
 package com.company;
-import java.util.ArrayList;
+
 import java.util.Observer;
 import java.util.Observable;
 
@@ -36,4 +36,3 @@ public class WeatherData extends Observable {
         return pressure;
     }
 }
-

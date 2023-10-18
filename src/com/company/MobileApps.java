@@ -16,18 +16,18 @@ public class MobileApps implements Observer, DisplayElement{
 
     public void display(){
         System.out.println("-------- Mobile Weather Application --------");
-        System.out.println("Temperature: " + temp + "C");
+        System.out.println("Temperature:" + temp + "C");
         System.out.println("Humidity :" + humidity + "%");
         System.out.println("Pressure :" + pressure  + "hPa");
-        System.out.println("--------------------------------------------");
     }
 
     public void update(Observable obs, Object arg){
-        if (obs instanceof WeatherData) {
+        if (obs instanceof WeatherData){
             WeatherData weatherData = (WeatherData)obs;
             temp = weatherData.getTemp();
             humidity = weatherData.getHumidity();
             pressure = weatherData.getPressure();
+            display();
         }
     }
 }
